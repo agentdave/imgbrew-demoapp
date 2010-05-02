@@ -1,2 +1,59 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<% content_for :head do %>
+  <title>ImgBrew DemoApp</title>
+	<%= stylesheet_link_tag "home" %>
+<% end %>
+<div class="content_block">
+	<div class="content">
+		<% if @image.nil? -%>
+			<b>Upload a photo...</b>
+			<br/><br/>
+			<% form_tag ({:action => 'upload'}, :multipart => true) do -%>
+				<p><label for="upload_file">Select File</label> : 
+				<%= file_field 'upload', 'datafile' %></p>
+				<%= submit_tag "Upload", :class => 'large fancy_button'  %>
+			<% end -%>
+		<% else %>
+			<%= link_to "« Upload another photo", :controller => 'home' %>
+			<div id="grid">
+				<div id="grid_top">
+					<div class="large">
+						<div class="small">
+							<img src="/uploads/<%= @image %>"/>
+						</div>
+					</div>
+					<div class="set">
+						<div class="small">
+							<img src="/uploads/<%= @image %>"/>
+						</div>
+						<div class="small">
+							<img src="/uploads/<%= @image %>"/>
+						</div>
+						<div class="small">
+							<img src="/uploads/<%= @image %>"/>
+						</div>
+						<div class="small">
+							<img src="/uploads/<%= @image %>"/>
+						</div>
+						<div class="small">
+							<img src="/uploads/<%= @image %>"/>
+						</div>
+						<div class="small">
+							<img src="/uploads/<%= @image %>"/>
+						</div>
+					</div>
+				</div>
+				<div id="grid_bottom">
+					<div class="medium">
+						<img src="/uploads/<%= @image %>"/>
+					</div>
+					<div class="medium">
+						<img src="/uploads/<%= @image %>"/>
+					</div>
+					<div class="medium">
+						<img src="/uploads/<%= @image %>"/>
+					</div>
+				</div>
+			</div>
+		<% end -%>
+	</div>
+</div>
