@@ -3,3 +3,8 @@
 Background courtesy of:
 
 http://lostandtaken.com/blog/2009/6/3/vintage-damask-textures-part-ii.html
+
+== Settings
+
+- The following prefix is added to any of the files uploaded: http://allweb.smackaho.st:3242/127.0.0.1:3001
+- It assumes that the port of the demo app is 3001 and that it is bound to 127.0.0.1
