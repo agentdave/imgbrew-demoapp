@@ -1,4 +1,4 @@
-h2. Setup (for localhost)
+== Setup (for localhost)
 
 - 	Set up a bucket named "allweb" that points to the source url "http://"
 - 	This application assumes that the imgbrew-backend app is running on port: 3242
@@ -16,7 +16,7 @@ h2. Setup (for localhost)
 	
 		http://allweb.smackaho.st:3242/{application_host}:{application_port}/public/uploads/{commands}
 
-h2. Credits
+== Credits
 
 Background courtesy of:
 
