@@ -3,7 +3,7 @@ class HomeController < ApplicationController
 	
 	def index
 		@image = params[:image]
-		@image_prefix = "http://allweb.smackaho.st:3242/127.0.0.1:3001"
+		@image_prefix = "http://allweb.smackaho.st:3242/#{request.host}:#{request.port}"
 	end
 	
 	def upload
