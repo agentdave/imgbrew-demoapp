@@ -4,7 +4,24 @@ Background courtesy of:
 
 http://lostandtaken.com/blog/2009/6/3/vintage-damask-textures-part-ii.html
 
-== Settings
+== Setup (for localhost)
+
+- 	Set up a bucket named "allweb" that points to the source url "http://"
+- 	This application assumes that the imgbrew-backend app is running on port: 3242
+- 	Grabbing an image via: 
+		
+		http://allweb.smackaho.st:3242/{application_host}:{application_port}/{image_path}/{commands}
+  
+	will retrieve the source image from: 
+		
+		http://{application_host}:{application_port}/{image_path}
+		
+	and apply the {commands} to it.
+-	The demo application uses /public/uploads to store uploaded pictures, so the address it uses
+	to retrieve them (and apply any commands) is:
+	
+		http://allweb.smackaho.st:3242/{application_host}:{application_port}/public/uploads/{commands}
+
 
 - The following prefix is added to any of the files uploaded: http://allweb.smackaho.st:3242/127.0.0.1:3001
 - It assumes that the port of the demo app is 3001 and that it is bound to 127.0.0.1
