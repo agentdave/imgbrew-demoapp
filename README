@@ -8,3 +8,8 @@ http://lostandtaken.com/blog/2009/6/3/vintage-damask-textures-part-ii.html
 
 - The following prefix is added to any of the files uploaded: http://allweb.smackaho.st:3242/127.0.0.1:3001
 - It assumes that the port of the demo app is 3001 and that it is bound to 127.0.0.1
+
+- The application expects the "uploads" directory to exist in the public folder, but it is not included in the repository
+  - cd public
+  - mkdir uploads
+  after grabbing the app
